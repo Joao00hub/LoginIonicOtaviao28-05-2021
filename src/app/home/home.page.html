@@ -1,20 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Log In
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item class="animate__animated animate__bounceIn animate__slower	3s">
+    <ion-label position="floating">Email:</ion-label>
+    <ion-input clearInput type="email"></ion-input>
+  </ion-item>
+  <ion-item class="animate__animated animate__fadeInLeft animate__slower	3s">
+    <ion-label position="floating">Senha:</ion-label>
+    <ion-input clearInput type="password"></ion-input>
+  </ion-item>
+  <br>
+  <section>
+    <ion-button expand="block" color="danger" (click)="chamaAlert()">Entrar <ion-icon name="log-in-outline"></ion-icon>
+    </ion-button>
+  </section>
+  <ion-text color="secondary" class="esqueceu">
+    <h6 href="#">Esqueçeu a senha?</h6>
+  </ion-text>
 </ion-content>

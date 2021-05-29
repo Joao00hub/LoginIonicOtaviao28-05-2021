@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private alertCtrl: AlertController) { }
 
+  async chamaAlert() {
+    const alert = await this.alertCtrl.create({
+      cssClass: 'my-custom-class',
+      header: 'Bem Vindo!',
+      message: '<strong>João Tadeu</strong>!!!',
+      
+    });
+
+    await alert.present();
+  }
 }
